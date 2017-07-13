@@ -14,6 +14,7 @@ config=$(cat <<CONDARC
 
 channels:
  - conda-forge
+ - ryanvolz
  - defaults
 
 conda-build:
@@ -63,21 +64,21 @@ source run_conda_forge_build_setup
     export CONDA_PY=27
     set +x
     conda build /recipe_root --quiet || exit 1
-    upload_or_check_non_existence /recipe_root conda-forge --channel=main || exit 1
+    upload_or_check_non_existence /recipe_root ryanvolz --channel=main || exit 1
 
     set -x
     export CONDA_NPY=112
     export CONDA_PY=27
     set +x
     conda build /recipe_root --quiet || exit 1
-    upload_or_check_non_existence /recipe_root conda-forge --channel=main || exit 1
+    upload_or_check_non_existence /recipe_root ryanvolz --channel=main || exit 1
 
     set -x
     export CONDA_NPY=113
     export CONDA_PY=27
     set +x
     conda build /recipe_root --quiet || exit 1
-    upload_or_check_non_existence /recipe_root conda-forge --channel=main || exit 1
+    upload_or_check_non_existence /recipe_root ryanvolz --channel=main || exit 1
 touch /feedstock_root/build_artefacts/conda-forge-build-done
 EOF
 

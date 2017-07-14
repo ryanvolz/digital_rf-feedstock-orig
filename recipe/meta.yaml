@@ -1,16 +1,15 @@
-{% set name = "digital_rf" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.1" %}
 
 package:
-  name: {{ name }}
+  name: digital_rf
   version: {{ version }}
 
 source:
-  git_url: git@github.mit.edu:/rvolz/{{ name }}.git
-  git_rev: {{ version }}
+  url: https://github.com/MITHaystack/digital_rf/archive/{{ version }}.tar.gz
+  sha256: e644622816e0ab5d78e67d268e858a829e716d03e2e5326c86e87e93640d205c
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   detect_binary_files_with_prefix: True
 
@@ -21,14 +20,14 @@ requirements:
     - numpy x.x
     - hdf5 1.8.18|1.8.18.*
     - gnuradio
-    - boost 1.62.*
+    - boost 1.64.*
     - swig
     - cppunit
   run:
     - python >=2.7,<3
     - hdf5 1.8.18|1.8.18.*
     - gnuradio
-    - boost 1.62.*
+    - boost 1.64.*
     - numpy x.x
     - h5py
     - matplotlib
@@ -42,6 +41,7 @@ test:
   imports:
     - digital_rf
     - digital_rf.digital_rf_hdf5
+    - gr_drf
   source_files:
     - tests/*.py
     - examples/*.py

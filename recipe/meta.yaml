@@ -17,13 +17,13 @@ requirements:
   build:
     - toolchain
     - cmake >=3.0
+    - setuptools
     - python >=2.7,<3
     - numpy x.x
     - hdf5 1.8.18|1.8.18.*
     - gnuradio
     - boost 1.64.*
     - swig
-    - cppunit
   run:
     - python >=2.7,<3
     - hdf5 1.8.18|1.8.18.*

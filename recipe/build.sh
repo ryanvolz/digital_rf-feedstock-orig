@@ -9,7 +9,8 @@ cd build
 cmake ../ \
     -DSWIG_EXECUTABLE=$PREFIX/bin/swig \
     -DCMAKE_PREFIX_PATH=$PREFIX \
-    -DCMAKE_INSTALL_PREFIX=$PREFIX
+    -DCMAKE_INSTALL_PREFIX=$PREFIX \
+    -DLIB_SUFFIX=""
 make
 make test
 rm -r /tmp/hdf5

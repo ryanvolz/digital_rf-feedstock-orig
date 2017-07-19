@@ -6,12 +6,13 @@ CXXFLAGS="${CXXFLAGS} -D_GLIBCXX_USE_CXX11_ABI=0"
 
 mkdir build
 cd build
-cmake ../ \
+cmake \
     -DSWIG_EXECUTABLE=$PREFIX/bin/swig \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_INSTALL_LIBDIR=lib \
-    -DLIB_SUFFIX=""
+    -DLIB_SUFFIX="" \
+    ..
 make
 make test
 rm -r /tmp/hdf5

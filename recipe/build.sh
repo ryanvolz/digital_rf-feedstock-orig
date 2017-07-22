@@ -13,7 +13,7 @@ cmake \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DLIB_SUFFIX="" \
     ..
-make VERBOSE=1
+make
 make test
 rm -r /tmp/hdf5
 make install

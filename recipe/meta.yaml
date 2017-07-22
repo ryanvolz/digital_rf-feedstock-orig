@@ -1,5 +1,5 @@
-{% set version = "2.5.2rc2" %}
-{% set sha256 = "60712bbe08456c52acacc14e9ec64a543dc5099e86403bbd2895dbc8af5b4d7a" %}
+{% set version = "2.5.2" %}
+{% set sha256 = "fa7e9535cbbf64bbcc266fb780b8511e1108628801c16fe94aa2ada10ebcb5fe" %}
 
 package:
   name: digital_rf

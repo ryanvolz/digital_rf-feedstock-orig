@@ -1,4 +1,5 @@
-{% set version = "2.5.1" %}
+{% set version = "2.5.2rc1" %}
+{% set sha256 = 2e83186227cbebf197ceb31dba89e136063a288a13481658ed897546a724b7be %}
 
 package:
   name: digital_rf
@@ -6,7 +7,7 @@ package:
 
 source:
   url: https://github.com/MITHaystack/digital_rf/archive/{{ version }}.tar.gz
-  sha256: e644622816e0ab5d78e67d268e858a829e716d03e2e5326c86e87e93640d205c
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -21,22 +22,26 @@ requirements:
     - python >=2.7,<3
     - numpy x.x
     - hdf5 1.8.18|1.8.18.*
+    # gnuradio requirements
     - gnuradio
     - boost 1.64.*
     - swig
+    - log4cpp
   run:
     - python >=2.7,<3
     - hdf5 1.8.18|1.8.18.*
-    - gnuradio
-    - boost 1.64.*
     - numpy x.x
     - h5py
+    - gnuradio
     - matplotlib
     - scipy
     - watchdog
     # extra requirements for thor script
     - pytz
     - dateutil
+    # gnuradio requirements
+    - boost 1.64.*
+    - log4cpp
 
 test:
   imports:

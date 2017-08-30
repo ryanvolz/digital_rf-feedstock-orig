@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   detect_binary_files_with_prefix: True
 
@@ -20,7 +20,7 @@ requirements:
     - cmake >=3.0
     - setuptools
     - python >=2.7,<3
-    - numpy x.x
+    - numpy 1.8.*
     - hdf5 1.8.18|1.8.18.*
     # gnuradio requirements
     - gnuradio
@@ -30,7 +30,7 @@ requirements:
   run:
     - python >=2.7,<3
     - hdf5 1.8.18|1.8.18.*
-    - numpy x.x
+    - numpy >=1.8
     - h5py
     - gnuradio
     - matplotlib

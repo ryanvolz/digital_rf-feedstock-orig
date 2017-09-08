@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
   detect_binary_files_with_prefix: True
 
@@ -23,7 +23,7 @@ requirements:
     - numpy 1.8.*
     - hdf5 1.8.18|1.8.18.*
     # gnuradio requirements
-    - gnuradio
+    - gnuradio 3.7.11|3.7.11.*
     - boost 1.64.*
     - swig
     - log4cpp
@@ -32,7 +32,7 @@ requirements:
     - hdf5 1.8.18|1.8.18.*
     - numpy >=1.8
     - h5py
-    - gnuradio
+    - gnuradio 3.7.11|3.7.11.*
     - matplotlib
     - scipy
     - watchdog

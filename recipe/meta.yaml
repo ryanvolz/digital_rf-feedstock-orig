@@ -1,5 +1,5 @@
-{% set version = "2.5.4" %}
-{% set sha256 = "ec97bb48972a74ad11bbf1757543e3192ad50e57a080b6e10f796e5e9df5f526" %}
+{% set version = "2.6.0" %}
+{% set sha256 = "" %}
 
 package:
   name: digital_rf
@@ -16,46 +16,41 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - cheetah
     - cmake >=3.0
-    - setuptools
-    - python >=2.7,<3
+    - hdf5 1.8.18|1.8.18.*
     - numpy 1.8.*
-    - hdf5 1.8.18|1.8.18.*
-    # gnuradio requirements
-    - gnuradio 3.7.11|3.7.11.*
-    - boost 1.64.*
-    - swig
-    - log4cpp
-  run:
+    - pkgconfig
     - python >=2.7,<3
-    - hdf5 1.8.18|1.8.18.*
-    - numpy >=1.8
+    - setuptools
+    - toolchain
+  run:
+    - dateutil
+    - gnuradio
     - h5py
-    - gnuradio 3.7.11|3.7.11.*
+    - hdf5 1.8.18|1.8.18.*
     - matplotlib
+    - numpy >=1.8
+    - packaging
+    - pandas
+    - python >=2.7,<3
+    - pytz
     - scipy
     - watchdog
-    # extra requirements for thor script
-    - pytz
-    - dateutil
-    # gnuradio requirements
-    - boost 1.64.*
-    - log4cpp
 
 test:
   imports:
     - digital_rf
     - digital_rf.digital_rf_hdf5
-    - gr_drf
+    - gr_digital_rf
   source_files:
-    - tests/*.py
-    - examples/*.py
+    - python/tests/*.py
+    - python/examples/*.py
   commands:
-    - python tests/test_digital_rf_hdf5.py
+    - python python/tests/test_digital_rf_hdf5.py
     - rm -r /tmp/hdf5*
-    - python examples/example_write_digital_metadata.py
-    - python examples/example_read_digital_metadata.py
+    - python python/examples/example_write_digital_metadata.py
+    - python python/examples/example_read_digital_metadata.py
     - rm -r /tmp/test_metadata/
 
 about:
@@ -71,12 +66,12 @@ about:
     to the documentation.
 
     This suite of software includes libraries for reading and writing data in
-    the Digital RF HDF5 format in C (``libdigital_rf``) and Python
-    (``digital_rf``), with optional interfaces for GNU Radio (``gr_drf``) and
-    MATLAB. It also contains the `thor` UHD radio recorder script, Python tools
-    for managing and processing Digital RF data, example scripts that
-    demonstrate basic usage, and example applications that encompass a complete
-    data recording and processing chain for various use cases.
+    the Digital RF HDF5 format in C (``libdigital_rf``), Python
+    (``digital_rf``) with blocks for GNU Radio (``gr_digital_rf``), and
+    MATLAB. It also contains the `thor` UHD radio recorder script, Python
+    tools for managing and processing Digital RF data, example scripts that
+    demonstrate basic usage, and example applications that encompass a
+    complete data recording and processing chain for various use cases.
 
   doc_url: https://github.com/MITHaystack/digital_rf/tree/master/docs
   dev_url: https://github.com/MITHaystack/digital_rf

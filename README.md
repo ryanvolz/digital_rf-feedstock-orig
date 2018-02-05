@@ -16,12 +16,12 @@ rapid random access for data processing. For details on the format, refer
 to the documentation.
 
 This suite of software includes libraries for reading and writing data in
-the Digital RF HDF5 format in C (``libdigital_rf``) and Python
-(``digital_rf``), with optional interfaces for GNU Radio (``gr_drf``) and
-MATLAB. It also contains the `thor` UHD radio recorder script, Python tools
-for managing and processing Digital RF data, example scripts that
-demonstrate basic usage, and example applications that encompass a complete
-data recording and processing chain for various use cases.
+the Digital RF HDF5 format in C (``libdigital_rf``), Python
+(``digital_rf``) with blocks for GNU Radio (``gr_digital_rf``), and
+MATLAB. It also contains the `thor` UHD radio recorder script, Python
+tools for managing and processing Digital RF data, example scripts that
+demonstrate basic usage, and example applications that encompass a
+complete data recording and processing chain for various use cases.
 
 
 Current build status

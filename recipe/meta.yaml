@@ -1,13 +1,14 @@
-{% set version = "2.6.0" %}
-{% set sha256 = "" %}
+{% set hash = "" %}
+{% set version = "" %}
 
 package:
   name: digital_rf
-  version: {{ version }}
+  # 9 prefix in local version needed as hack to ensure proper ordering (after 0)
+  version: {{ version }}+9g{{ hash[:7] }}
 
 source:
-  url: https://github.com/MITHaystack/digital_rf/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/MITHaystack/digital_rf.git
+  git_rev: {{ hash }}
 
 build:
   number: 0

@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     - cmake >=3.0
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - mako
     - numpy 1.8.*  # [not (win and (py35 or py36))]
     - numpy 1.9.*  # [win and py35]
@@ -34,7 +34,7 @@ requirements:
     - dateutil
     - gnuradio  # [not win or not py27]
     - h5py
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - matplotlib
     - numpy >=1.8  # [not (win and (py35 or py36))]
     - numpy >=1.9  # [win and py35]

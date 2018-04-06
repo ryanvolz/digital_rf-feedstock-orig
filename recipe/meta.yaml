@@ -32,7 +32,7 @@ requirements:
     - vc 14  # [win and py>=35]
   run:
     - dateutil
-    - gnuradio  # [not win or not py27]
+    - gnuradio  # [not win and py27]
     - h5py
     - hdf5 1.10.1
     - matplotlib

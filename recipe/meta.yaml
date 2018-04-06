@@ -31,7 +31,6 @@ requirements:
     - vc 9  # [win and py27]
     - vc 14  # [win and py>=35]
   run:
-    - dateutil
     - gnuradio  # [not win and py27]
     - h5py
     - hdf5 1.10.1
@@ -42,6 +41,7 @@ requirements:
     - packaging
     - pandas
     - python
+    - python-dateutil
     - pytz
     - scipy
     - six

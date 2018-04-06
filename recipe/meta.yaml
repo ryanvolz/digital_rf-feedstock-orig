@@ -14,7 +14,6 @@ build:
   detect_binary_files_with_prefix: True
   features:
     - vc9  # [win and py27]
-    - vc10  # [win and py34]
     - vc14  # [win and py>=35]
 
 requirements:
@@ -26,11 +25,10 @@ requirements:
     - numpy 1.9.*  # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - pkgconfig
-    - python 2.7.*|>=3.5
+    - python
     - setuptools
     - toolchain
     - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
     - vc 14  # [win and py>=35]
   run:
     - dateutil
@@ -43,12 +41,11 @@ requirements:
     - numpy >=1.11  # [win and py36]
     - packaging
     - pandas
-    - python 2.7.*|>=3.5
+    - python
     - pytz
     - scipy
     - six
     - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
     - vc 14  # [win and py>=35]
     - watchdog
 

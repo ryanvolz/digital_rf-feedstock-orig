@@ -55,7 +55,7 @@ test:
   imports:
     - digital_rf
     - digital_rf.digital_rf_hdf5
-    - gr_digital_rf  # [not win]
+    - gr_digital_rf  # [not win and py27]
   source_files:
     - python/tests/*.py
     - python/examples/*.py

@@ -56,6 +56,8 @@ test:
     - pytest
     - python python/examples/example_write_digital_metadata.py
     - python python/examples/example_read_digital_metadata.py
+    - conda inspect linkages -p $PREFIX digital_rf  # [not win]
+    - conda inspect objects -p $PREFIX digital_rf  # [osx]
 
 about:
   home: https://github.com/MITHaystack/digital_rf

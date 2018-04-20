@@ -51,6 +51,7 @@ install:
       conda config --remove channels defaults
       conda config --add channels defaults
       conda config --add channels ryanvolz
+      conda config --add channels ryanvolz/label/prerelease
       conda config --add channels conda-forge
       conda config --set show_channel_urls true
       conda install --yes --quiet conda-forge-ci-setup=1
@@ -59,4 +60,4 @@ install:
 script:
   - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
 
-  - upload_or_check_non_existence ./recipe ryanvolz --channel=main -m ./.ci_support/${CONFIG}.yaml
+  - upload_or_check_non_existence ./recipe ryanvolz --channel=prerelease -m ./.ci_support/${CONFIG}.yaml

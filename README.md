@@ -27,14 +27,16 @@ complete data recording and processing chain for various use cases.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/ryanvolz/digital_rf-feedstock.svg?style=shield)](https://circleci.com/gh/ryanvolz/digital_rf-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/ryanvolz/digital_rf-feedstock.svg?branch=master)](https://travis-ci.org/ryanvolz/digital_rf-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/ryanvolz/digital_rf-feedstock?svg=True)](https://ci.appveyor.com/project/ryanvolz/digital-rf-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/ryanvolz/digital_rf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/ryanvolz/digital_rf-feedstock)
+[![OSX](https://img.shields.io/travis/ryanvolz/digital_rf-feedstock/master.svg?label=macOS)](https://travis-ci.org/ryanvolz/digital_rf-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/ryanvolz/digital_rf-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/ryanvolz/digital-rf-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/ryanvolz/digital_rf/badges/version.svg)](https://anaconda.org/ryanvolz/digital_rf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/ryanvolz/digital_rf/badges/downloads.svg)](https://anaconda.org/ryanvolz/digital_rf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-digital_rf-green.svg)](https://anaconda.org/ryanvolz/digital_rf) | [![Conda Downloads](https://img.shields.io/conda/dn/ryanvolz/digital_rf.svg)](https://anaconda.org/ryanvolz/digital_rf) | [![Conda Version](https://img.shields.io/conda/vn/ryanvolz/digital_rf.svg)](https://anaconda.org/ryanvolz/digital_rf) | [![Conda Platforms](https://img.shields.io/conda/pn/ryanvolz/digital_rf.svg)](https://anaconda.org/ryanvolz/digital_rf) |
 
 Installing digital_rf
 =====================

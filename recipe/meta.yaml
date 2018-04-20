@@ -11,33 +11,28 @@ source:
 
 build:
   number: 0
-  detect_binary_files_with_prefix: True
-  features:
-    - vc9  # [win and py27]
-    - vc14  # [win and py>=35]
+  run_exports:
+    - {{ pin_subpackage('digital_rf') }}
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - cmake >=3.0
-    - hdf5 1.10.1
+
+  host:
+    - hdf5
     - mako
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - numpy
     - pkgconfig
     - python
     - setuptools
-    - toolchain
-    - vc 9  # [win and py27]
-    - vc 14  # [win and py>=35]
+
   run:
-    - gnuradio  # [not win and py27]
+    - gnuradio  # [(not win) and py27]
     - h5py
-    - hdf5 1.10.1
+    - {{ pin_compatible('hdf5', min_pin='x.x.x', max_pin='x.x.x') }}  # needed until hdf5 package has run_exports
     - matplotlib
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - numpy
     - packaging
     - pandas
     - python
@@ -45,8 +40,6 @@ requirements:
     - pytz
     - scipy
     - six
-    - vc 9  # [win and py27]
-    - vc 14  # [win and py>=35]
     - watchdog
 
 test:
@@ -55,7 +48,7 @@ test:
   imports:
     - digital_rf
     - digital_rf.digital_rf_hdf5
-    - gr_digital_rf  # [not win and py27]
+    - gr_digital_rf  # [(not win) and py27]
   source_files:
     - python/tests/*.py
     - python/examples/*.py

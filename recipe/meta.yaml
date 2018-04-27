@@ -1,5 +1,5 @@
-{% set hash = "" %}
-{% set version = "" %}
+{% set hash = "a3e9ad2d383d17cd69418907e60f2fe7329e6854" %}
+{% set version = "2.6.0rc1" %}
 
 package:
   name: digital_rf

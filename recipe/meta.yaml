@@ -1,12 +1,12 @@
 {% set version = "2.6.1" %}
-{% set sha256 = "94482123aaa611a557699f68e34f07a737f33675dc2740bea9a164f13127485b" %}
+{% set sha256 = "cea7143db21b5cb0e17e070ead368b62c13d91f0f77d0f3b20159cb253b21465" %}
 
 package:
   name: digital_rf
   version: {{ version }}
 
 source:
-  url: https://github.com/MITHaystack/digital_rf/archive/{{ version }}.tar.gz
+  url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:

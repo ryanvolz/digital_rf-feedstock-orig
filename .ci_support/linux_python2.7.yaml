@@ -1,12 +1,18 @@
 c_compiler:
-- toolchain_c
+- gcc
+c_compiler_version:
+- '7'
+channel_sources:
+- conda-forge,ryanvolz,defaults
+channel_targets:
+- ryanvolz main
+docker_image:
+- condaforge/linux-anvil-comp7
 hdf5:
-- 1.10.2
+- 1.10.5
 numpy:
-- '1.9'
+- '1.14'
 pin_run_as_build:
-  hdf5:
-    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x

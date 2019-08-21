@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('digital_rf') }}
 
@@ -32,7 +32,7 @@ requirements:
     - h5py
     - hdf5
     - matplotlib
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - packaging
     - pandas
     - python

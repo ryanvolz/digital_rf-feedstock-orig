@@ -1,5 +1,5 @@
-{% set version = "2.6.2" %}
-{% set sha256 = "adf690c730f31685f9c4d6d8bb470541e62f31380355f741327b9fea9ee0b43e" %}
+{% set version = "2.6.3" %}
+{% set sha256 = "81624b4cffe727e0ef47369dd2b9b5993b3bfc0f3ce74f34c3f9dcea3a3650d6" %}
 
 package:
   name: digital_rf
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('digital_rf') }}
 

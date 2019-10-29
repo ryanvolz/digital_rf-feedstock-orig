@@ -11,6 +11,8 @@ source:
 
 build:
   number: 0
+  # there are dependency conflicts for Python 2 on Windows
+  skip: True  # [win and py<30]
   run_exports:
     - {{ pin_subpackage('digital_rf') }}
 

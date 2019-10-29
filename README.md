@@ -84,13 +84,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2008python2.7</td>
-              <td>
-                <a href="https://dev.azure.com/rvolz/feedstock-builds/_build/latest?definitionId=5&branchName=master">
-                  <img src="https://dev.azure.com/rvolz/feedstock-builds/_apis/build/status/digital_rf-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008python2.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>win_c_compilervs2015python3.6</td>
               <td>
                 <a href="https://dev.azure.com/rvolz/feedstock-builds/_build/latest?definitionId=5&branchName=master">

@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # there are dependency conflicts for Python 2 on Windows
   skip: True  # [win and py<30]
   run_exports:
@@ -30,7 +30,8 @@ requirements:
     - setuptools
 
   run:
-    - gnuradio  # [(not win) and py27]
+    - gnuradio-core  # [(not win) and py27]
+    - gnuradio-uhd  # [(not win) and py27]
     - h5py
     - hdf5
     - matplotlib
